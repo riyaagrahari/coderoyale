@@ -2,7 +2,7 @@
 include 'config.php';
 //include 'time.php';
 session_start();
-$ques =isset($_POST['qid'])?mysqli_real_escape_string($_POST['qid']):"";
+$ques =isset($_POST['qid']);
 
 $sql=mysqli_query($con,"SELECT * From Questions where qid = '$ques' ");
 if(!$sql){
